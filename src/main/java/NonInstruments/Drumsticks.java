@@ -6,12 +6,4 @@ public class Drumsticks extends NonInstrument {
         super(name, buyPrice, sellPrice, quantity);
     }
 
-
-
-    public String sell() {
-        if(this.quantity > 0){
-        return "item sold";}
-        else return "item out of stock";
-    }
-
 }

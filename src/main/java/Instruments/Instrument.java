@@ -89,7 +89,10 @@ public abstract class Instrument implements IPlay, ISell {
 
     public String sell() {
         if(this.quantity > 0){
-            return "item sold";}
+            int result = this.quantity -1;
+            this.setQuantity(result);
+            return "item sold";
+        }
         else return "item out of stock";
     }
 

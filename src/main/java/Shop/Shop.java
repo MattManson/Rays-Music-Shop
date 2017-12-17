@@ -1,5 +1,7 @@
 package Shop;
 
+import Instruments.Saxophone;
+
 import java.util.ArrayList;
 
 public class Shop {
@@ -36,4 +38,12 @@ public class Shop {
     }
 
 
+
+    public void removeItem(ISell item) {
+        this.items.remove(item);
+    }
+
+    public int getnumItems() {
+        return this.items.size();
+    }
 }

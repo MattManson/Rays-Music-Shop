@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 public class ShopTest {
 
@@ -53,10 +52,10 @@ public class ShopTest {
         assertEquals(34960.5, shop.totalProfit(),0.01);
     }
 
-//    @Test
-//    public void canSellItem(){
-//
-//    }
-
+    @Test
+    public void canRemoveItem(){
+        shop.removeItem(saxophone);
+        assertEquals(5, shop.getnumItems());
+    }
 
 }
