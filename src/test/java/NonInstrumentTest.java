@@ -52,6 +52,7 @@ public class NonInstrumentTest {
     @Test
     public void canSell(){
         assertEquals("item sold", drumsticks.sell());
+        assertEquals(19, drumsticks.getQuantity());
         assertEquals("item sold", sheetMusic.sell());
     }
 

@@ -34,4 +34,6 @@ public class Shop {
             value += item.getProfit();
         }return value;
     }
+
+
 }

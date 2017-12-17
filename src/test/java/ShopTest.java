@@ -53,11 +53,10 @@ public class ShopTest {
         assertEquals(34960.5, shop.totalProfit(),0.01);
     }
 
-
-
-
-
-
+//    @Test
+//    public void canSellItem(){
+//
+//    }
 
 
 }
