@@ -52,4 +52,11 @@ public abstract class NonInstrument implements ISell {
     public String getMarkup() {
         return sellPrice/buyPrice *100 + "%";
     }
+
+    public String sell() {
+        if(this.quantity > 0){
+            return "item sold";}
+        else return "item out of stock";
+    }
+
 }

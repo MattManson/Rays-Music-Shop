@@ -8,16 +8,16 @@ public abstract class Instrument implements IPlay {
     private String colour;
     private String material;
     private double sellPrice;
-    private double buyprice;
+    private double buyPrice;
     private int quantity;
 
-    public Instrument(String model, InstrumentType instrumentType, String colour, String material, double sellPrice, double buyprice, int quantity){
+    public Instrument(String model, InstrumentType instrumentType, String colour, String material, double sellPrice, double buyPrice, int quantity){
         this.model = model;
         this.instrumentType = instrumentType;
         this.colour = colour;
         this.material = material;
         this.sellPrice = sellPrice;
-        this.buyprice = buyprice;
+        this.buyPrice = buyPrice;
         this.quantity = quantity;
     }
 
@@ -62,11 +62,11 @@ public abstract class Instrument implements IPlay {
     }
 
     public double getBuyprice() {
-        return buyprice;
+        return buyPrice;
     }
 
     public void setBuyprice(double buyprice) {
-        this.buyprice = buyprice;
+        this.buyPrice = buyprice;
     }
 
     public int getQuantity() {
@@ -79,5 +79,15 @@ public abstract class Instrument implements IPlay {
 
     public String play() {
         return null;
+    }
+
+    public String getMarkup() {
+        return sellPrice/buyPrice *100 + "%";
+    }
+
+    public String sell() {
+        if(this.quantity > 0){
+            return "item sold";}
+        else return "item out of stock";
     }
 }

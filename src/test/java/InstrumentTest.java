@@ -54,7 +54,25 @@ public class InstrumentTest {
         assertEquals("ba-dum-tsss", drumkit.play());
     }
 
+    @Test
+    public void canSell(){
+        assertEquals("item sold", saxophone.sell());
+        assertEquals("item sold", guitar.sell());
+    }
 
+    @Test
+    public void cantSell(){
+        saxophone.setQuantity(0);
+        guitar.setQuantity(0);
+        assertEquals("item out of stock", saxophone.sell());
+        assertEquals("item out of stock", guitar.sell());
+    }
+
+    @Test
+    public void canGetMarkup(){
+        assertEquals("160.0%", guitar.getMarkup());
+        assertEquals("186.66666666666666%", drumkit.getMarkup());
+    }
 
 
 
