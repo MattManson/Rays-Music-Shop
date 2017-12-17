@@ -1,6 +1,8 @@
 package Instruments;
 
-public abstract class Instrument implements IPlay {
+import Shop.ISell;
+
+public abstract class Instrument implements IPlay, ISell {
 
 
     private String model;
@@ -89,5 +91,13 @@ public abstract class Instrument implements IPlay {
         if(this.quantity > 0){
             return "item sold";}
         else return "item out of stock";
+    }
+
+    public double getProfit() {
+        return ((sellPrice - buyPrice)* quantity);
+    }
+
+    public String prettyName() {
+        return this.instrumentType.getType();
     }
 }

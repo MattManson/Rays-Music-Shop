@@ -69,4 +69,10 @@ public class NonInstrumentTest {
         assertEquals("350.0%", sheetMusic.getMarkup());
     }
 
+    @Test
+    public void canGetProfit(){
+        assertEquals(60.0, drumsticks.getProfit(), 0.01);
+        assertEquals(12.5, sheetMusic.getProfit(), 0.01);
+    }
+
 }

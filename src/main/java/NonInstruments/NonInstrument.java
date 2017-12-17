@@ -59,4 +59,7 @@ public abstract class NonInstrument implements ISell {
         else return "item out of stock";
     }
 
+    public double getProfit() {
+        return ((sellPrice - buyPrice)* quantity);
+    }
 }

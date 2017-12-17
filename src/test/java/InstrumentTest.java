@@ -39,6 +39,14 @@ public class InstrumentTest {
     }
 
     @Test
+    public void canGetPrettyname(){
+        assertEquals("guitar", guitar.prettyName());
+        assertEquals("saxophone", saxophone.prettyName());
+        assertEquals("drumkit", drumkit.prettyName());
+        assertEquals("keyboard", keyboard.prettyName());
+    }
+
+    @Test
     public void canGetattributes(){
         assertEquals(23, saxophone.getValves());
         assertEquals(6, guitar.getStringNum());
@@ -74,6 +82,12 @@ public class InstrumentTest {
         assertEquals("186.66666666666666%", drumkit.getMarkup());
     }
 
-
+    @Test
+    public void canGetProfit(){
+        assertEquals(18000.0, guitar.getProfit(),0.01);
+        assertEquals(3088, saxophone.getProfit(),0.01);
+        assertEquals(7800, drumkit.getProfit(),0.01);
+        assertEquals(6000, keyboard.getProfit(),0.01);
+    }
 
 }
